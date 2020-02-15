@@ -89,7 +89,7 @@ class Recipe:
         return recipes[:n]
 
 
-def n_random_sorted(n=40):
+def n_random_sorted(n=10):
     """Returns n recipes in descending order of likes"""
     if n < 1:
         ValueError(f"n must be greater than 0, n was {n}")
