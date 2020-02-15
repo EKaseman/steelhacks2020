@@ -84,7 +84,7 @@ class Recipe:
         """Computes the most similar recipes, and returns n of them"""
         if n < 1:
             ValueError(f"n must be greater than 0, n was {n}")
-        recipes = [Recipe(id) for id in recipe_data]
+        recipes = [Recipe(id) for id in recipe_data if id != self.id]
         recipes.sort(key=lambda r: r.similarity(self))
         return recipes[:n]
 

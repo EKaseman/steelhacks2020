@@ -1,0 +1,73 @@
+{% extends "base.html"%}
+
+{% block title %}{{recipe.name}} - {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <!--- Start Recipe Col -->
+            <div class="col-md-8 ">
+                <div class="p-2 my-5 rounded bg-light text-dark">
+                    <div class="row">
+                        <h3 class="my-4 col-12 font-weight-bold" >{{recipe.name}}</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="my-4 font-weight-bold" >Ingredients</h3>
+                            <ul class="list-group list-group-flush">
+                                {% for ingredient in recipe.ingredients.values() %}
+                                <li class="list-group-item">{{ingredient['string']}}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                        <h3 class="my-4 font-weight-bold" >Steps</h3>
+                            <ol class="list-group list-group-flush">
+                                {% for step in recipe.steps %}
+                                <li class="list-group-item"><strong>{{loop.index}}) </strong>{{step}}</li>
+                                {% endfor %}
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--- End Recipe Col -->
+        <!--- Start suggestion col -->
+        <div class="col-md-4">
+            {% for sim in similar_recs %}
+                <div class="card my-5 rounded">
+                  <div class="card-body">
+                  <a href="{{url_for("recipe", rid=sim.id)}}">
+                  <img class="card-img-top" src="{{sim.image}}" alt="" >
+                  </a>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="font-weight-bold">{{sim.name}}</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="offset-4 mb-3">
+                              <a href="{{url_for("recipe", rid=sim.id)}}" class="btn btn-primary recipe-btn centered">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="list-group">
+                        {% for added in recipe.ingredients_added_in(sim) %}
+                        <li class="list-group-item list-group-item-success">+ {{added}}</li>
+                        {% endfor %}
+                        {% for removed in recipe.ingredients_removed_from(sim) %}
+                        <li class="list-group-item list-group-item-danger">- {{removed}}</li>
+                        {% endfor %}
+                    </ul> 
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+        <!--- End suggestion col -->
+    </div>
+</div>
+{% endblock %}
