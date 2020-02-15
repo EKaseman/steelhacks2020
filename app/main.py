@@ -4,8 +4,10 @@ from flask import abort
 
 app = Flask(__name__)
 
-from data import Recipe, n_random_sorted, recipe_data
 
+flask_root_path=  app.root_path
+
+from data import Recipe, n_random_sorted, recipe_data
 
 @app.route("/")
 @app.route("/home/")

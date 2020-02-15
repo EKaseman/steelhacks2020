@@ -1,9 +1,9 @@
 import pickle
 import random
 import os
-from main import app
+from main import flask_root_path
 
-with open(os.path.join(app.root_path, "data.pickle"), "rb") as f:
+with open(os.path.join(flask_root_path, "data.pickle"), "rb") as f:
     full_recipe_data = pickle.load(f)
 
 
