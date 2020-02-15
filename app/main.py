@@ -20,9 +20,11 @@ def recipe(rid=None):
     This is the recipe view
     Will display ingredients, steps, and similar recipes with diffs
     """
+
     if rid is None:
         ValueError("The recipe id is not found.")
 
+    rid = int(rid)
     # 404 not found
     if rid not in recipe_data:
         return f"I cannot find a reicpe with id {rid}.", 404
