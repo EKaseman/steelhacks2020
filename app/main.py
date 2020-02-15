@@ -1,9 +1,10 @@
 from flask import Flask
 from flask import render_template
 from flask import abort
-from data import Recipe, n_random_sorted, recipe_data
 
 app = Flask(__name__)
+
+from data import Recipe, n_random_sorted, recipe_data
 
 
 @app.route("/")
