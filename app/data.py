@@ -1,4 +1,5 @@
 import pickle
+import random
 
 with open("data.pickle", "rb") as f:
     full_recipe_data = pickle.load(f)
@@ -36,7 +37,10 @@ class Recipe:
         self.ingredients = rdict["ingredients"]
         self.likes = rdict["likes"]
         self.name = rdict["name"]
-        self.steps =rdict["steps"]
+        self.steps = rdict["steps"]
+
+    def __repr__(self):
+        return f"<{self.name}:{self.id}>"
 
     def _diff_ingredients(self, r):
         """ returns ingredients that are added in r, and ingredients that are
@@ -45,29 +49,40 @@ class Recipe:
         r_ings = set(r.ingredients)
 
         # exclusive to r
-        added = {id:r.ingredients[id] for id in r_ings.difference(our_ings)}
+        added = {id: r.ingredients[id] for id in r_ings.difference(our_ings)}
 
         # exclusive to this recipe
-        removed = {id:self.ingredients[id] for id in our_ings.difference(r_ings)}
+        removed = {id: self.ingredients[id] for id in our_ings.difference(r_ings)}
 
         return added, removed
 
     def ingredients_added_in(self, other):
         """Returns a list of ingredient names exclusive to other"""
         added, _ = self._diff_ingredients(other)
-        return [d["name"]   for d in added.values() ]
+        return [d["name"] for d in added.values()]
 
     def ingredients_removed_from(self, other):
         """Returns a list of ingredient names exclusive to this recipe"""
         _, removed = self._diff_ingredients(other)
-        return [d["name"]   for d in removed.values() ]
+        return [d["name"] for d in removed.values()]
 
     def similarity(self, other):
-        """Returns the length of the set of the symmetric difference, the total
-        number of items not in common"""
+        """
+        Returns the length of the symmetric difference of the sets of
+        ingredients,  the total number of items not in common
+        0 is the same ingredients
+        """
 
         our_ings = set(self.ingredients)
         other_ings = set(other.ingredients)
         return len(our_ings.symmetric_difference(other_ings))
 
 
+def n_random_sorted(n=10):
+    """Returns n recipes in descending order of likes"""
+    if n < 1:
+        ValueError(f"n must be greater than 0, n was {n}")
+    recipes = [Recipe(id) for id in random.choices(list(recipe_data), k=n)]
+    # sort in descending order on agg. likes
+    recipes.sort(key=lambda r: -r.likes)
+    return recipes
