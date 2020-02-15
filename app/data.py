@@ -12,6 +12,17 @@ recipe_data = {
         "picture": "https://hips.hearstapps.com/vidthumb/images/delish-chicken-parm-still006-1553287552.jpg",
         "tags": []
     },
+     "1": {
+        "name":"Baked Eggplant Parmesan",
+        "ingredients": {["2 medium eggplants, sliced into 1/2-inch thick rounds","1 1/2 cups Panko breadcrumbs","1 Tablespoon Italian seasoning, homemade or store-bought","2 eggs (or 1 egg + 2 egg whites)","1 (25 ounce) jar DeLallo Tomato Basil Pomodoro Fresco Tomato Sauce","2 cups grated Mozzarella cheese (I used part-skim)","2/3 cup finely-grated Parmesan cheese","1/2 cup loosely-packed chopped or julienned fresh basil","salt","cooking spray (or olive oil in a Misto)"]},
+        "instructions": {"step1":"If you have extra time and would like to remove some of the bitterness of the eggplant, sprinkle each round with a pinch of salt.  Then place the rounds in a colander in the sink to drain, or place them on a few paper towels for about 30 minutes.  Rinse the salt off with water, then proceed with the recipe.","step2":"Preheat oven to 425°F.  Prepare two baking sheets with parchment paper, and set aside.","step3":"In a shallow bowl, whisk together Panko breadcrumbs, Italian seasoning and 1 teaspoon salt until combined.  In a separate bowl, whisk the eggs until smooth.  Dip an eggplant round on both sides in the whisked egg mixture, then immediately dip it in the breadcrumb mixture until the eggplant is completely coated, then set on a parchment-covered baking sheet.  Repeat with the remaining eggplant rounds until they are all evenly spaced on the baking sheets.  Bake for 20 minutes, flipping once halfway through, until the breadcrumbs are toasted and slightly golden.  Remove from the oven and set aside.","step4":"Spread 1/2 cup tomato sauce evenly over the bottom of an 11 x 8-inch baking dish.  Place half of the eggplant in a (mostly) even layer along the bottom of the baking dish.  Spread an additional 1 cup of tomato sauce evenly over the eggplant.  Then sprinkle 1 cup Mozzarella cheese evenly over the sauce, followed by 1/3 cup Parmesan cheese, followed by 1/4 cup of the fresh basil.  Repeat with another layer of the remaining eggplant, then tomato sauce, then Mozzarella, then Parmesan cheese.","step5":"Bake for 15-20 minutes until the cheese is melted and starts to turn slightly golden around the edges, and the sauce is bubbly.  Remove and sprinkle with the remaining basil.  Serve immediately."},
+        "description": "A healthy alternative to your favorite dish",
+        "time": "50 minutes",
+        "related": ["Chicken Parmesan"],
+        "likes": 0,
+        "picture": "https://www.gimmesomeoven.com/wp-content/uploads/2015/07/Eggplant-Parmesan-4.jpg",
+        "tags": []
+    }
 }
     
 }
