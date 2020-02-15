@@ -8,15 +8,15 @@
 
         {% for recipe in recipes %}
       <div class="col-md-6 mb-4">
-          <a href="{{url_for("recipe", rid=recipe.id)}}">
         <div class="card">
+          <a href="{{url_for("recipe", rid=recipe.id)}}">
           <img class="card-img-top" src="{{recipe.image}}" alt="" >
+          </a>
           <div class="card-body">
               {{recipe.name}}
               <a href="{{url_for("recipe", rid=recipe.id)}}" class="btn btn-primary recipe-btn">Read More</a>
           </div>
         </div>
-          </a>
       </div>
       {% endfor %}
 
