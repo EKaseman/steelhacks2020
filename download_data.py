@@ -5,6 +5,12 @@ import json
 import pickle
 import requests
 
+"""
+NOTE: You must signup on rapidapi.com, and set the API_KEY environment variable.
+To set the variable in the terminal type:
+export API_KEY="YOUR_API_KEY_HERE"
+"""
+
 url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search"
 
 querystring = {"number": "100", "instructionsRequired": "true", "query": "soup"}
