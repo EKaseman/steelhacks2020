@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="container home-content">
+
+
+    <!-- Page Features -->
+    <div class="row text-center">
+
+        {% for recipe in recipes %}
+      <div class="col-md-6 mb-4">
+          <a href="{{url_for("recipe", rid=recipe.id)}}">
+        <div class="card">
+          <img class="card-img-top" src="{{recipe.image}}" alt="" >
+          <div class="card-body">
+              {{recipe.name}}
+              <a href="{{url_for("recipe", rid=recipe.id)}}" class="btn btn-primary recipe-btn">Read More</a>
+          </div>
+        </div>
+          </a>
+      </div>
+      {% endfor %}
+
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  {% endblock %}

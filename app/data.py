@@ -70,12 +70,21 @@ class Recipe:
         """
         Returns the length of the symmetric difference of the sets of
         ingredients,  the total number of items not in common
-        0 is the same ingredients
+        0 is the same ingredients (possibly different amounts)
+        A.similarity(B) == B.similarity(A)
         """
 
         our_ings = set(self.ingredients)
         other_ings = set(other.ingredients)
         return len(our_ings.symmetric_difference(other_ings))
+
+    def n_most_similar(self, n=10):
+        """Computes the most similar recipes, and returns n of them"""
+        if n < 1:
+            ValueError(f"n must be greater than 0, n was {n}")
+        recipes = [Recipe(id) for id in recipe_data]
+        recipes.sort(key=lambda r: r.similarity(self))
+        return recipes[:n]
 
 
 def n_random_sorted(n=10):
