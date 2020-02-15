@@ -22,7 +22,18 @@ recipe_data = {
         "likes": 0,
         "picture": "https://www.gimmesomeoven.com/wp-content/uploads/2015/07/Eggplant-Parmesan-4.jpg",
         "tags": []
-    }
+    },
+    "2": {
+        "name":"Gluten-Free Chicken Parmesan",
+        "ingredients": {["3 tablespoons olive oil plus more for greasing","3 tablespoons your preferred gluten-free flour mix","Kosher salt and freshly ground pepper","1 egg","2 teaspoons gluten-free Dijon mustard","2/3 cup gluten-free panko breadcrumbs","6 tablespoons finely grated Parmesan cheese divided","2 boneless skinless chicken cutlets","11/2 cups (12 ounces) your preferred jarred gluten-free marinara sauce","2/3 cup about 2 ounces shredded mozzarella cheese","1/2 cup lightly packed fresh basil leaves"]},
+        "instructions": {"step1":"Heat the oven to 350°F. Lightly grease a large, ovenproof frying pan or 9 by 13-inch baking dish.","step2":"In a small bowl, combine the flour, 1⁄2 teaspoon salt, and 1⁄4 teaspoon pepper.","step3":"In another small bowl, whisk together the egg, mustard, and 2 teaspoons water.","step4":"In a third small bowl, combine the breadcrumbs, 4 tablespoons of the Parmesan cheese, and a few grinds of pepper.","step5":"One at a time, place each chicken cutlet between two pieces of plastic wrap and, using a mallet or the bottom of a frying pan, gently pound to an even 1⁄4-inch thickness.","step6":"Dredge each piece of chicken in the seasoned flour. Shake off the excess, then dunk the chicken into the egg mixture to coat. Finally, coat with the breadcrumb mixture, using your hands to pack the crumb mixture onto the chicken pieces. Reserve on a plate.","step7":"Line a plate with paper towels. Heat the 3 tablespoons olive oil in a large skillet over medium-high heat until the oil is shimmering. Add the chicken in one layer, in batches, if necessary. Cook until each side is golden brown and crispy, 2 to 3 minutes per side. Transfer the cooked chicken to the prepared plate and sprinkle with salt.","step8":"Spread half the marinara sauce in the bottom of the prepared baking dish. Layer the chicken on top of the sauce. Pour the remaining sauce over the chicken, top with the mozzarella cheese and the remaining 2 tablespoons Parmesan cheese, and bake until the cheese is golden and bubbly, 20 to 25 minutes.","step9":"Chop the fresh basil leaves, sprinkle them over the chicken Parmesan, and serve."},
+        "description": "A gluten-free alternative to your favorite dish",
+        "time": "45 minutes",
+        "related": ["Chicken Parmesan"],
+        "likes": 0,
+        "picture": "https://i2.wp.com/gffmag.com/wp-content/uploads/2018/12/WW_Winter19_Chicken-Parm-e1553544222229.jpg?w=1200&ssl=1",
+        "tags": []
+    },
 }
     
 }
