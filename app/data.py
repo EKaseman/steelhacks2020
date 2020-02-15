@@ -5,9 +5,9 @@ recipe_data = {
         "name":"chicken parmesan",
         "ingredients": {["2 large eggs","1 tablespoon garlic","2 tablespoons parsley","salt and pepper","3 large chicken breasts halved","1 cup Panko breadcrumbs",""]},
         "instructions": {"step1":"Add one cup of olives to the ice cream"},
-        "description": str(),
-        "time":0,
-        "related": [],
+        "description": "Deliciousness in a bag",
+        "time": "40 minutes",
+        "related": ["tacos"],
         "likes": 0,
         "picture": "cat.gif",
         "tags": []
