@@ -13,8 +13,18 @@
           <img class="card-img-top" src="{{recipe.image}}" alt="" >
           </a>
           <div class="card-body">
-              {{recipe.name}}
-              <a href="{{url_for("recipe", rid=recipe.id)}}" class="btn btn-primary recipe-btn">Read More</a>
+              <div class="container">
+                  <div class="row">
+                      <div class=" col auto-mx d-block">
+                          {{recipe.name}}
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col auto-mx d-block">
+                          <a href="{{url_for("recipe", rid=recipe.id)}}" class="btn btn-primary recipe-btn">Read More</a>
+                      </div>
+                  </div>
+              </div>
           </div>
         </div>
       </div>
