@@ -11,7 +11,7 @@ from data import Recipe, n_random_sorted, recipe_data
 @app.route("/")
 @app.route("/home/")
 def home():
-    return render_template("home.html", recipes=n_random_sorted(n=10))
+    return render_template("home.html", recipes=n_random_sorted(n=40))
 
 
 @app.route("/recipe/<rid>/")

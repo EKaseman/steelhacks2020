@@ -89,11 +89,11 @@ class Recipe:
         return recipes[:n]
 
 
-def n_random_sorted(n=10):
+def n_random_sorted(n=40):
     """Returns n recipes in descending order of likes"""
     if n < 1:
         ValueError(f"n must be greater than 0, n was {n}")
-    recipes = [Recipe(id) for id in random.choices(list(recipe_data), k=n)]
+    recipes = list({ Recipe(id) for id in random.choices(list(recipe_data), k=n) })
     # sort in descending order on agg. likes
     recipes.sort(key=lambda r: -r.likes)
     return recipes
