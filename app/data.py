@@ -1,7 +1,8 @@
 import pickle
 import random
+import os
 
-with open("data.pickle", "rb") as f:
+with open(os.path.abspath(os.path.join(".","data.pickle")), "rb") as f:
     full_recipe_data = pickle.load(f)
 
 
