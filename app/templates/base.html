@@ -31,10 +31,11 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home
+              <a class="nav-link" href="{{url_for("home")}}">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
+          <!--
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>
@@ -44,6 +45,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
+          -->
         </ul>
       </div>
     </div>
@@ -51,38 +53,13 @@
   {% endblock %}
 
   <!-- Page Content -->
-  <div class="container">
-
-
-    <!-- Page Features -->
-    <div class="row text-center">
-
-        {% for recipe in recipes %}
-      <div class="col-md-12 mb-4">
-        <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="" >
-          <div class="card-body">
-              <h4 class="card-title">{{recipe.name}}</h4>
-            <p class="card-text"></p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Find Out More!</a>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-
-
-    </div>
-    <!-- /.row -->
-
-  </div>
-  <!-- /.container -->
+  {% block content %}
+  {% endblock %}
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      <p class="m-0 text-center text-white">STEELHACKS 2020</p>
     </div>
     <!-- /.container -->
   </footer>
