@@ -35,13 +35,8 @@ recipe_data = {
         "tags": []
     },
 }
-    
-}
 
-my_id=0
-"""prints every ingredient in recipe 0"""
-for ingredient in recipe_data[my_id]["ingredients"]:
-    print(ingredient)
+
 
 
 
