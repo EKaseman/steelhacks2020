@@ -3,18 +3,20 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
  */
-
-.home-content {
-    margin-top: 200px
+body {
+  padding-top: 56px;
 }
 
-.fn-logo {
+.home-content{
+    margin-top: 50px
+}
+
+.fn-logo{
     height:50px
 }
-body {
+body{
   background-image: url("/static/images/grid.png");
   background-repeat: repeat-y repeat-y;
-  background-size: 10px;
-  padding-top: 56px;
+  background-size: 5px;
 }
 
